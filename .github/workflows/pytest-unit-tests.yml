@@ -32,7 +32,7 @@ jobs:
         echo "::set-env name=TESTS::tests/"
 
     - name: Install dependencies on MacOS (1)
-      if: matrix.os == macos-latest
+      if: matrix.os == 'macos-latest'
       run: |
         curl -O https://bootstrap.pypa.io/ez_setup.py
         python3 ez_setup.py
@@ -40,7 +40,7 @@ jobs:
         python3 get-pip.py
 
     - name: Install dependencies (1)
-      if: matrix.os != macos-latest
+      if: matrix.os != 'macos-latest'
       run: |
         sudo apt-get install python3-setuptools -y
 
