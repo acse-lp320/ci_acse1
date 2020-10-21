@@ -3,7 +3,6 @@ import pytest
 from simple_functions import sin
 
 
-
 class TestTrigFunctions(object):
     '''Class to test my trigonometric functions implementation'''
 
