@@ -16,8 +16,12 @@ on:
 
 jobs:
   pytest:
-    name: unit testing
-    runs-on: ubuntu-latest
+    #name: unit testing
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-18.04, macos-latest]
 
     steps:
     - name: Checkout simple_functions
