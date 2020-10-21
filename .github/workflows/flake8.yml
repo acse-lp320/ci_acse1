@@ -6,6 +6,8 @@ on:
    push:
      branches:
        - main
+   # Triggers when a pull request is open on branch
+   # main or when it's updated (ie with a push)
    pull_request:
      branches:
        - main
