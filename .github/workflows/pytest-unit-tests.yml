@@ -9,6 +9,10 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Run unit testing'
 
 jobs:
   pytest:
